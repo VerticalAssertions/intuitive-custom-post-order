@@ -32,9 +32,9 @@ $hicpo_tags = isset( $hicpo_options['tags'] ) ? $hicpo_options['tags'] : array()
 			<?php
 				$post_types = get_post_types( array (
 					'show_ui' => true,
-					'show_in_menu' => true,
+					//'show_in_menu' => true, // Quoted: allow to display post types not in menu such as ACF groups
 				), 'objects' );
-				
+
 				foreach ( $post_types  as $post_type ) {
 					if ( $post_type->name == 'attachment' ) continue;
 					?>
@@ -62,7 +62,7 @@ $hicpo_tags = isset( $hicpo_options['tags'] ) ? $hicpo_options['tags'] : array()
 				$taxonomies = get_taxonomies( array(
 					'show_ui' => true,
 				), 'objects' );
-				
+
 				foreach( $taxonomies as $taxonomy ) {
 					if ( $taxonomy->name == 'post_format' ) continue;
 					?>
@@ -82,25 +82,25 @@ $hicpo_tags = isset( $hicpo_options['tags'] ) ? $hicpo_options['tags'] : array()
 <p class="submit">
 	<input type="submit" class="button-primary" name="hicpo_submit" value="<?php _e( 'Update' ); ?>">
 </p>
-	
+
 </form>
 
 </div>
 
 <script>
 (function($){
-	
+
 	$("#hicpo_allcheck_objects").on('click', function(){
 		var items = $("#hicpo_select_objects input");
 		if ( $(this).is(':checked') ) $(items).prop('checked', true);
-		else $(items).prop('checked', false);	
+		else $(items).prop('checked', false);
 	});
 
 	$("#hicpo_allcheck_tags").on('click', function(){
 		var items = $("#hicpo_select_tags input");
 		if ( $(this).is(':checked') ) $(items).prop('checked', true);
-		else $(items).prop('checked', false);	
+		else $(items).prop('checked', false);
 	});
-	
+
 })(jQuery)
 </script>
