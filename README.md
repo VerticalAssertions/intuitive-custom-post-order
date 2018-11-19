@@ -2,6 +2,10 @@
 
 <a href="http://hijiriworld.com/web/plugins/intuitive-custom-post-order/">Intuitive Custom Post Order</a> is WordPress Plugin that order items using a drag and drop sortable JavaScript.
 
+This fork includes :
+* <a href="https://github.com/afragen/github-updater">GitHub updater</a> capability
+* ACF group fields ordering capability
+
 ## Description
 
 Intuitively, order items( Posts, Pages, ,Custom Post Types, Custom Taxonomies, Sites ) using a drag and drop sortable JavaScript.
